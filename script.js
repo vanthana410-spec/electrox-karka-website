@@ -158,7 +158,6 @@ threshold: 0.15
 revealItems.forEach((item) => {
 revealObserver.observe(item);
 });
-/* Futuristic Hero Animation */
 
 .hero {
     position: relative;
