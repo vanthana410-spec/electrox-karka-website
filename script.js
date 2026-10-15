@@ -1,5 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {```js
+  // Click spark effect
+  document.addEventListener("click", (event) => {
+    const spark = document.createElement("span");
+    spark.className = "click-spark";
+    spark.textContent = "✦";
 
+    spark.style.left = event.clientX + "px";
+    spark.style.top = event.clientY + "px";
+    spark.style.setProperty("--spark-x", (Math.random() - 0.5) * 80 + "px");
+    spark.style.setProperty("--spark-y", (Math.random() - 0.5) * 80 + "px");
+
+    document.body.appendChild(spark);
+    spark.addEventListener("animationend", () => spark.remove());
+  });
     // Mobile navigation
     const menuButton = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
