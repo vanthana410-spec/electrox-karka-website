@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {```js
+document.addEventListener("DOMContentLoaded", () => {
   // Click spark effect
   document.addEventListener("click", (event) => {
     const spark = document.createElement("span");
